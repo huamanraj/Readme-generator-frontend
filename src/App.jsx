@@ -19,7 +19,7 @@ function App() {
     setCopySuccess(false);
 
     try {
-      const response = await axios.post('https://readme-generator-backend-12.onrender.com/generate-readme', { repoUrl });
+      const response = await axios.post('https://readme-generator-backend.vercel.app/generate-readme', { repoUrl });
       setReadme(response.data.readme);
     } catch (error) {
       console.error('Error generating README:', error);
