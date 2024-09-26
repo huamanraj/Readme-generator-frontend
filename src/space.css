@@ -1,0 +1,122 @@
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .stars::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+  }
+  
+  
+  
+  .meteor-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .meteor {
+    position: absolute;
+    width: 150px;
+    height: 1px;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to right, #fff, rgba(255,255,255,0));
+    animation: meteor linear infinite;
+  }
+  
+  .meteor:nth-child(1) {
+    top: 10%;
+    left: 50%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+  }
+  
+  .meteor:nth-child(2) {
+    top: 30%;
+    left: 80%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+  }
+  
+  .meteor:nth-child(3) {
+    top: 60%;
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+  }
+  
+  .meteor:nth-child(4) {
+    top: 80%;
+    left: 70%;
+    animation-duration: 8s;
+    animation-delay: 1s;
+  }
+  
+  @keyframes meteor {
+    0% {
+      transform: rotate(-45deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translateX(-1000px);
+      opacity: 0;
+    }
+  }
+
+
+  .social-icons {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 50;
+  }
+  
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .social-icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
